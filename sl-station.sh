@@ -52,8 +52,8 @@ if [ $HTTP_STATUS -eq 200  ]; then
 	
 	if [ ${#next_buss[0]} -gt 4 ]; then
 	next_buss[0]=$[($(date "+%s" --date "${next_buss[0]}")-$(date "+%s"))/60]
-	next_buss[2]=${next_buss[3]}
-	next_buss[1]=${next_buss[2]}
+	next_buss[3]=${next_buss[2]}
+	next_buss[2]=${next_buss[1]}
 	fi
 	
 	
