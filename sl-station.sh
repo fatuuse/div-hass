@@ -2,6 +2,7 @@
 
 # SL-hållplatser
 #            
+# Find station id at http://mini.sl.se
 
 link=http://mini.sl.se/sv/realtime/Departures?fromSiteId=
 
