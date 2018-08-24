@@ -2,12 +2,12 @@
 
 # SL-hållplatser
 #            
-# Find station id at http://mini.sl.se
+# Find station id at http://mini.sl.se/sv/realtime
 
 link=http://mini.sl.se/sv/realtime/Departures?fromSiteId=
 
-STATION=(4059 4364)
-# Rosenmalm 4364
+STATION=(4059 1003)
+
 # Värmdö Marknad 4059
 # Slussen 9192
 
