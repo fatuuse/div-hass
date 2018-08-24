@@ -7,9 +7,10 @@
 link=http://mini.sl.se/sv/realtime/Departures?fromSiteId=
 
 STATION=(4059 1003)
-
+# Sveavägen Odeng 1003
 # Värmdö Marknad 4059
 # Slussen 9192
+
 
 hass_link="http://127.0.0.1:8123/api/states/sensor.sl_"
 pass=
