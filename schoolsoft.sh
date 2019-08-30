@@ -1,7 +1,26 @@
 #!/bin/bash
 
 # SchoolSoft
-# Version 20190828
+# Version 20190829
+
+# sensor in Home Assistant
+#- platform: command_line
+#  name: SchoolSoft
+#  json_attributes:
+#  - updated
+#  - elev0
+#  - tider0
+#  - mat0
+#  - aktiviteter0
+#  - elev1
+#  - tider1
+#  - mat1
+#  - aktiviteter1
+#  - icon
+#  scan_interval: 14400
+#  command: "bash /home/homeassistant/.homeassistant/scripts/schoolsoft.sh -s 12345,12345 -u yyyyy -p xxxxx -k stockholm -o json"
+#  value_template: '{{ value_json.dag0 }}'
+
 
 #user running
 uid=$(id -u -n)
