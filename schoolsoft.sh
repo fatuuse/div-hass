@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # SchoolSoft
-# Version 20190829
+# Version 20201022
 
 help() {
 cat <<EOT
@@ -93,7 +93,7 @@ declare -a aktiviteter
 declare -a dag
 
 link_login="https://sms.schoolsoft.se/$kommun/jsp/Login.jsp"
-link_students="https://sms.schoolsoft.se/varmdo/jsp/student/right_parent_pwdadmin.jsp"
+link_students="https://sms.schoolsoft.se/$kommun/jsp/student/right_parent_pwdadmin.jsp"
 link_base="https://sms.schoolsoft.se/$kommun/jsp/student/"
 pages=("top_student.jsp" "right_student_startpage_preschool.jsp" "right_parent_preschool_schedule_new.jsp" "right_student_lunchmenu.jsp" "right_student_schedule.jsp")
 
@@ -363,5 +363,3 @@ printf "$result"
 
 fi # end output
 fi # end action
-
-
