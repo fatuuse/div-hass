@@ -1,0 +1,20 @@
+sensor:
+- platform: scrape
+  resource: https://www.helgdagar.nu/flaggdagar
+  name: Flaggdagar
+  select: 'figure table tbody'
+  index: 0
+  value_template: >-
+    {% set list1 = ((value).split("2022-") | select("match", ".*"~now().month~"-.*") | list) %}
+    {% set list2 = ((value).split("2022-") | select("match", ".*"~int(now().month+1)~"-.*") | list) %}
+    {{ (list1 + list2)[:5] | join(',')}}
+  scan_interval: 1209600 # 2w
+
+template:
+- trigger:
+  - platform: time_pattern
+    hours: 0
+  binary_sensor:
+  - name: "Flaggdag"
+    state: "{{ now().strftime('%m-%d') in states('states.flaggdagar') }}"
+    icon: mdi:flag
